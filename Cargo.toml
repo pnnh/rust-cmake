@@ -1,0 +1,14 @@
+[package]
+name = "rust_cmake"
+version = "0.1.0"
+edition = "2021"
+
+build = "build.rs"
+
+[dependencies]
+libc = "0.2.112"
+rand = "0.8.4"
+
+[build-dependencies]
+cc = "1.0.72"
+cmake = "0.1"
