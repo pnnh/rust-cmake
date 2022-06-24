@@ -1,13 +1,4 @@
-#[link(name = "foo", kind = "static")]
-extern "C" {
-    // this is rustified prototype of the function from our C library
-    fn testcall(v: f32);
-}
-
-extern "C" {
-    #[link(name = "foo++", kind = "static")]
-    fn testcall_cpp(v: f32);
-}
+use foo_rs::{testcall, testcall_cpp};
 
 fn main() {
     println!("Hello, world from Rust!");

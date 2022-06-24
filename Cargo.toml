@@ -1,9 +1,18 @@
 [package]
-name = "rust_cmake"
+name = "foo_rs"
 version = "0.1.0"
 edition = "2021"
 
 build = "build.rs"
+
+[lib]
+name = "foo_rs"
+crate-type = ["staticlib", "lib"]
+path = "src/lib.rs"
+
+[[bin]]
+name = "main"
+path = "src/main.rs"
 
 [dependencies]
 libc = "0.2.112"
